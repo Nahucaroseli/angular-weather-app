@@ -1,16 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap");
+
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 120%;
     background-image: url(../public/img/scatteredClouds.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
   
+  #main_title{
+    color:white;
+  }
+
+
   .card {
     background: black;
     color: white;

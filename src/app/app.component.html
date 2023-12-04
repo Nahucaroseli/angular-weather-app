@@ -21,13 +21,13 @@
       </form>
     </div>
     <div class="weather loading" *ngIf="weather">
-      <h2 class="city">{{weather.name}}</h2>
+      <h1 class="city">{{weather.name}} ({{weather.sys.country}})</h1>
       <h1 class="temp">{{weather.main.temp}} °C</h1>
       <div class="flex">
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon"/>
+        <img [src]="'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'" alt="" class="icon" />
         <div class="description">{{weather.weather[0].description}}</div>
       </div>
-      <div class="humidity">Humidity:{{weather.main.humidity}}</div>
+      <div class="humidity">Humidity: {{weather.main.humidity}}</div>
       <div class="wind">Wind speed: {{weather.wind.speed}}</div>
     </div>
   </div>
